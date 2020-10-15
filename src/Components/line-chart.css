@@ -1,0 +1,41 @@
+.legend {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.legend.active::before {
+  border: none;
+  background-color: var(--chart-color);
+  opacity: 0.25;
+}
+
+.legend.active::after {
+  content: "";
+  position: absolute;
+  border: 3px solid var(--chart-color);
+  width: 10px;
+  height: 10px;
+}
+
+.legend::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #aaa;
+  display: block;
+}
+
+.legend-label {
+  font-size: 14px;
+  margin-left: 25px;
+  margin-right: 15px;
+  line-height: 15px;
+  color: #aaa;
+}
+.legend.active .legend-label {
+  color: black;
+}
